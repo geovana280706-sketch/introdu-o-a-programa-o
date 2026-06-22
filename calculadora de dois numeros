@@ -1,0 +1,36 @@
+# Solução 1 - usando FOR
+
+print("=== FOR ===")
+
+for andar in range(20, 0, -1):
+    if andar == 13:
+        continue
+    print(andar)
+
+
+# Solução 2 - usando WHILE
+
+print("\n=== WHILE ===")
+
+andar = 20
+
+while andar >= 1:
+    if andar != 13:
+        print(andar)
+    andar -= 1
+
+
+# Solução 3 - simulando DO-WHILE
+
+print("\n=== DO-WHILE ===")
+
+andar = 20
+
+while True:
+    if andar != 13:
+        print(andar)
+
+    andar -= 1
+
+    if andar < 1:
+        break
