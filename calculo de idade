@@ -1,0 +1,37 @@
+# Programa para calcular idade no ano de 2022
+
+# Entrada e validação do nome
+nome_completo = input("Digite seu nome completo: ").strip()
+while not nome_completo:
+    print("Erro: o nome não pode estar vazio.")
+    nome_completo = input("Digite seu nome completo: ").strip()
+
+# Definição dos limites e ano de referência
+ANO_REFERENCIA = 2022
+ANO_MINIMO = 1922
+ANO_MAXIMO = 2021
+
+# Entrada e validação do ano de nascimento
+while True:
+    entrada = input(f"Digite seu ano de nascimento (entre {ANO_MINIMO} e {ANO_MAXIMO}): ").strip()
+    
+    # Verifica se é um número inteiro
+    if not entrada.isdigit():
+        print("Erro: valor inválido. Digite apenas números.")
+        continue
+    
+    ano_nascimento = int(entrada)
+    
+    # Verifica se está dentro do intervalo permitido
+    if ANO_MINIMO <= ano_nascimento <= ANO_MAXIMO:
+        break
+    else:
+        print(f"Erro: o ano deve estar entre {ANO_MINIMO} e {ANO_MAXIMO}.")
+
+# Cálculo da idade
+idade = ANO_REFERENCIA - ano_nascimento
+
+# Exibição do resultado
+print("\n--- Resultado ---")
+print(f"Nome: {nome_completo}")
+print(f"No ano de {ANO_REFERENCIA}, você completou ou completará {idade} anos.")
